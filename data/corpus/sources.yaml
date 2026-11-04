@@ -1,0 +1,30 @@
+sources:
+  - id: fastapi
+    project: FastAPI
+    repository_url: https://github.com/fastapi/fastapi
+    documentation_url: https://fastapi.tiangolo.com
+    version_or_commit: "record-the-commit-used"
+    license: MIT
+    retrieved_at: "2026-10-27"
+    local_files:
+      - fastapi/sample.md
+
+  - id: pydantic
+    project: Pydantic
+    repository_url: https://github.com/pydantic/pydantic
+    documentation_url: https://docs.pydantic.dev
+    version_or_commit: "record-the-commit-used"
+    license: MIT
+    retrieved_at: "2026-10-27"
+    local_files:
+      - pydantic/sample.md
+
+  - id: opentelemetry-python
+    project: OpenTelemetry Python
+    repository_url: https://github.com/open-telemetry/opentelemetry-python
+    documentation_url: https://opentelemetry-python.readthedocs.io
+    version_or_commit: "record-the-commit-used"
+    license: Apache-2.0
+    retrieved_at: "2026-10-27"
+    local_files:
+      - opentelemetry/sample.md

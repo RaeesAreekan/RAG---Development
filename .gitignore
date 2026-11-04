@@ -1,0 +1,15 @@
+\docs
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.pyc
+
+.env
+.env.local
+
+data/processed/
+data/indexes/
+
+src/rag_hybrid_search.egg-info/
