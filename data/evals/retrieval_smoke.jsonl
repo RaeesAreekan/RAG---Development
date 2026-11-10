@@ -1,0 +1,4 @@
+{"id":"exact-keyword-001","question":"What configuration key controls the request timeout?","expected_terms":["timeout"],"type":"exact-keyword"}
+{"id":"semantic-001","question":"How are requests authenticated?","expected_terms":["API","key"],"type":"semantic"}
+{"id":"identifier-001","question":"What mechanism allows replacing dependencies during testing?","expected_terms":["dependency_overrides"],"type":"exact-identifier"}
+{"id":"unanswerable-001","question":"What database engine does this system use?","expected_terms":[],"type":"unanswerable"}

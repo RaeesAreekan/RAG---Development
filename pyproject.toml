@@ -26,6 +26,10 @@ dev = [
     "mypy>=1.10",
 ]
 
+reranker = [
+    "sentence-transformers>=3.0",
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
