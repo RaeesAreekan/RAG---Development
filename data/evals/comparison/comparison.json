@@ -1,0 +1,186 @@
+{
+  "dense": {
+    "retrieval_metrics": {
+      "recall_at_k": {
+        "1": 0.8387096774193549,
+        "3": 0.8709677419354839,
+        "5": 0.8709677419354839,
+        "10": 0.8709677419354839
+      },
+      "precision_at_k": {
+        "1": 0.8709677419354839,
+        "3": 0.3118279569892473,
+        "5": 0.18709677419354842,
+        "10": 0.09354838709677421
+      },
+      "reciprocal_rank": 0.8709677419354839,
+      "ndcg_at_k": {
+        "1": 0.8525345622119815,
+        "3": 0.8596983891404545,
+        "5": 0.8596983891404545,
+        "10": 0.8596983891404545
+      }
+    },
+    "answer_metrics": {
+      "case_count": 31,
+      "abstention_accuracy": 0.9032258064516129,
+      "citation_support_rate": 0.9069767441860465,
+      "citation_coverage": 0.9069767441860465,
+      "lexical_answer_f1": 0.644419199832276
+    },
+    "run_metadata": {
+      "corpus_version": "corpus-92b6dbbf925fedf5",
+      "retrieval_mode": "dense",
+      "embedding_model": "text-embedding-3-small",
+      "generation_model": "gpt-4o",
+      "evaluation_model": "gpt-4o-mini",
+      "dense_top_k": 10,
+      "sparse_top_k": 10,
+      "final_top_k": 5,
+      "dataset": "data\\evals\\golden.jsonl",
+      "case_count": 31,
+      "cache_enabled": true,
+      "cache_hits": 31,
+      "cache_misses": 0,
+      "duration_seconds": 0.031
+    }
+  },
+  "sparse": {
+    "retrieval_metrics": {
+      "recall_at_k": {
+        "1": 0.8387096774193549,
+        "3": 0.8709677419354839,
+        "5": 0.8709677419354839,
+        "10": 0.8709677419354839
+      },
+      "precision_at_k": {
+        "1": 0.8709677419354839,
+        "3": 0.3118279569892473,
+        "5": 0.18709677419354842,
+        "10": 0.09354838709677421
+      },
+      "reciprocal_rank": 0.8709677419354839,
+      "ndcg_at_k": {
+        "1": 0.8525345622119815,
+        "3": 0.8596983891404545,
+        "5": 0.8596983891404545,
+        "10": 0.8596983891404545
+      }
+    },
+    "answer_metrics": {
+      "case_count": 31,
+      "abstention_accuracy": 0.967741935483871,
+      "citation_support_rate": 0.975609756097561,
+      "citation_coverage": 0.975609756097561,
+      "lexical_answer_f1": 0.6620308930395161
+    },
+    "run_metadata": {
+      "corpus_version": "corpus-92b6dbbf925fedf5",
+      "retrieval_mode": "sparse",
+      "embedding_model": "text-embedding-3-small",
+      "generation_model": "gpt-4o",
+      "evaluation_model": "gpt-4o-mini",
+      "dense_top_k": 10,
+      "sparse_top_k": 10,
+      "final_top_k": 5,
+      "dataset": "data\\evals\\golden.jsonl",
+      "case_count": 31,
+      "cache_enabled": true,
+      "cache_hits": 31,
+      "cache_misses": 0,
+      "duration_seconds": 0.027
+    }
+  },
+  "hybrid": {
+    "retrieval_metrics": {
+      "recall_at_k": {
+        "1": 0.8387096774193549,
+        "3": 0.8709677419354839,
+        "5": 0.8709677419354839,
+        "10": 0.8709677419354839
+      },
+      "precision_at_k": {
+        "1": 0.8709677419354839,
+        "3": 0.3118279569892473,
+        "5": 0.18709677419354842,
+        "10": 0.09354838709677421
+      },
+      "reciprocal_rank": 0.8709677419354839,
+      "ndcg_at_k": {
+        "1": 0.8525345622119815,
+        "3": 0.8596983891404545,
+        "5": 0.8596983891404545,
+        "10": 0.8596983891404545
+      }
+    },
+    "answer_metrics": {
+      "case_count": 31,
+      "abstention_accuracy": 0.9032258064516129,
+      "citation_support_rate": 0.9069767441860465,
+      "citation_coverage": 0.9069767441860465,
+      "lexical_answer_f1": 0.6527402253073932
+    },
+    "run_metadata": {
+      "corpus_version": "corpus-92b6dbbf925fedf5",
+      "retrieval_mode": "hybrid",
+      "embedding_model": "text-embedding-3-small",
+      "generation_model": "gpt-4o",
+      "evaluation_model": "gpt-4o-mini",
+      "dense_top_k": 10,
+      "sparse_top_k": 10,
+      "final_top_k": 5,
+      "dataset": "data\\evals\\golden.jsonl",
+      "case_count": 31,
+      "cache_enabled": true,
+      "cache_hits": 31,
+      "cache_misses": 0,
+      "duration_seconds": 0.164
+    }
+  },
+  "hybrid-reranked": {
+    "retrieval_metrics": {
+      "recall_at_k": {
+        "1": 0.8387096774193549,
+        "3": 0.8709677419354839,
+        "5": 0.8709677419354839,
+        "10": 0.8709677419354839
+      },
+      "precision_at_k": {
+        "1": 0.8709677419354839,
+        "3": 0.3118279569892473,
+        "5": 0.18709677419354842,
+        "10": 0.09354838709677421
+      },
+      "reciprocal_rank": 0.8709677419354839,
+      "ndcg_at_k": {
+        "1": 0.8525345622119815,
+        "3": 0.8596983891404545,
+        "5": 0.8596983891404545,
+        "10": 0.8596983891404545
+      }
+    },
+    "answer_metrics": {
+      "case_count": 31,
+      "abstention_accuracy": 0.967741935483871,
+      "citation_support_rate": 0.9767441860465116,
+      "citation_coverage": 0.9767441860465116,
+      "lexical_answer_f1": 0.6299050941568063
+    },
+    "run_metadata": {
+      "corpus_version": "corpus-92b6dbbf925fedf5",
+      "retrieval_mode": "hybrid-reranked",
+      "embedding_model": "text-embedding-3-small",
+      "generation_model": "gpt-4o",
+      "evaluation_model": "gpt-4o-mini",
+      "dense_top_k": 10,
+      "sparse_top_k": 10,
+      "final_top_k": 5,
+      "dataset": "data\\evals\\golden.jsonl",
+      "case_count": 31,
+      "cache_enabled": true,
+      "cache_hits": 31,
+      "cache_misses": 0,
+      "duration_seconds": 0.541
+    }
+  }
+}

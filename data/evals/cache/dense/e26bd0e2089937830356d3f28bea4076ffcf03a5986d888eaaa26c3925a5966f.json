@@ -1,0 +1,662 @@
+{
+  "case_id": "fastapi-routing-001",
+  "question": "How are HTTP endpoints commonly defined in FastAPI?",
+  "retrieval_trace": {
+    "query": "How are HTTP endpoints commonly defined in FastAPI?",
+    "mode": "hybrid",
+    "dense_results": [
+      {
+        "chunk_id": "chunk-53da6c37225bc887",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "FastAPI applications commonly define HTTP endpoints using Python functions\ndecorated with route methods such as `@app.get()` and `@app.post()`.\n\nThe framework uses Python type annotations to describe request parameters and\nresponse values. These annotations can be used for validation and OpenAPI\nschema generation.",
+        "score": 0.6387383341789246,
+        "rank": 1,
+        "retrieval_method": "dense",
+        "raw_score": 0.36126166582107544,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "FastAPI Request Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-b7090f36273959e8",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Dependencies allow shared logic to be declared separately from endpoint\nfunctions. Typical dependency use cases include authentication, database\nsessions, request-scoped configuration, and permission checks.\n\nA dependency may itself depend on another dependency. FastAPI resolves the\ndependency graph before calling the endpoint.\n\nFor testing, applications can replace dependencies through\n`app.dependency_overrides`.",
+        "score": 0.4876384735107422,
+        "rank": 2,
+        "retrieval_method": "dense",
+        "raw_score": 0.5123615264892578,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Dependencies",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-2065d98b75c96f46",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Request bodies can be represented using Pydantic models. When an incoming\npayload does not match the declared model, the request should be rejected with\na validation error response.\n\nQuery parameters and path parameters may be declared directly in the endpoint\nfunction signature.\n\nExample configuration keys commonly used by an application include:\n\n- `response_model`\n- `status_code`\n- `dependency_overrides`\n- `openapi_url`",
+        "score": 0.42642319202423096,
+        "rank": 3,
+        "retrieval_method": "dense",
+        "raw_score": 0.573576807975769,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Request Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-2d3e103dada1dde4",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "A production service should expose a lightweight health endpoint such as\n`GET /health`.\n\nThe health endpoint should avoid expensive database queries unless the purpose\nof the endpoint is to verify dependency health. A separate readiness endpoint\nmay be used when startup dependencies must be checked before receiving traffic.",
+        "score": 0.38218677043914795,
+        "rank": 4,
+        "retrieval_method": "dense",
+        "raw_score": 0.617813229560852,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Deployment and Health Checks",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-3d8bec0149b12545",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "An application can raise `HTTPException` when it needs to return an HTTP error\nto the client. Exception handlers can customize the response format for\nspecific exception types.\n\nError responses should contain enough information for clients to understand\nwhether a request failed because of authentication, validation, authorization,\nor an internal server error.",
+        "score": 0.3766014575958252,
+        "rank": 5,
+        "retrieval_method": "dense",
+        "raw_score": 0.6233985424041748,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Error Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-1e1e6414d384b2d4",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Pydantic models describe structured data using Python type annotations. A model\nvalidates input data and exposes the validated result through model attributes.\n\nModels are useful for API request bodies, configuration objects, evaluation\nrecords, and serialized pipeline results.",
+        "score": 0.24469763040542603,
+        "rank": 6,
+        "retrieval_method": "dense",
+        "raw_score": 0.755302369594574,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Pydantic Models and Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-f8e95b3416f345cd",
+        "document_id": "doc-370bd58704fc7d9e",
+        "text": "Useful pipeline metrics include:\n\n- retrieval latency;\n- generation latency;\n- number of retrieved chunks;\n- citation support rate;\n- abstention rate;\n- token usage;\n- estimated model cost.\n\nMetrics should use stable names and bounded label values. Raw user questions\nshould not be used as metric labels because they create high-cardinality data.",
+        "score": 0.23249661922454834,
+        "rank": 7,
+        "retrieval_method": "dense",
+        "raw_score": 0.7675033807754517,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/opentelemetry/sample.md",
+        "section_heading": "Metrics",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-07b6c73bfd042a4d",
+        "document_id": "doc-370bd58704fc7d9e",
+        "text": "When a request passes through multiple services, trace context allows spans\nfrom those services to be associated with the same trace.\n\nA service should propagate context through supported request headers when making\ndownstream calls.",
+        "score": 0.21865683794021606,
+        "rank": 8,
+        "retrieval_method": "dense",
+        "raw_score": 0.7813431620597839,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/opentelemetry/sample.md",
+        "section_heading": "Context Propagation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-ad1a3ab5e9f22df7",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Pydantic models can be converted into dictionaries or JSON-compatible\nrepresentations. Serialization is useful when storing:\n\n- document metadata;\n- chunk records;\n- retrieval traces;\n- evaluation results;\n- API responses.\n\nA serialized object should preserve stable identifiers such as `document_id`,\n`chunk_id`, and `corpus_version`.",
+        "score": 0.212630033493042,
+        "rank": 9,
+        "retrieval_method": "dense",
+        "raw_score": 0.787369966506958,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Model Serialization",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-7423f12221625920",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Application settings should be separated from user-provided content. A settings\nmodel may load values from environment variables while still applying type\nvalidation and safe defaults.\n\nSensitive values such as `OPENAI_API_KEY` should not be included in logs,\nserialized reports, or error messages.",
+        "score": 0.20472991466522217,
+        "rank": 10,
+        "retrieval_method": "dense",
+        "raw_score": 0.7952700853347778,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Configuration Models",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      }
+    ],
+    "sparse_results": [
+      {
+        "chunk_id": "chunk-53da6c37225bc887",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "FastAPI applications commonly define HTTP endpoints using Python functions\ndecorated with route methods such as `@app.get()` and `@app.post()`.\n\nThe framework uses Python type annotations to describe request parameters and\nresponse values. These annotations can be used for validation and OpenAPI\nschema generation.",
+        "score": 8.395745109573449,
+        "rank": 1,
+        "retrieval_method": "sparse",
+        "raw_score": 8.395745109573449,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "FastAPI Request Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-2065d98b75c96f46",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Request bodies can be represented using Pydantic models. When an incoming\npayload does not match the declared model, the request should be rejected with\na validation error response.\n\nQuery parameters and path parameters may be declared directly in the endpoint\nfunction signature.\n\nExample configuration keys commonly used by an application include:\n\n- `response_model`\n- `status_code`\n- `dependency_overrides`\n- `openapi_url`",
+        "score": 3.0796373821325793,
+        "rank": 2,
+        "retrieval_method": "sparse",
+        "raw_score": 3.0796373821325793,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Request Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-b7090f36273959e8",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Dependencies allow shared logic to be declared separately from endpoint\nfunctions. Typical dependency use cases include authentication, database\nsessions, request-scoped configuration, and permission checks.\n\nA dependency may itself depend on another dependency. FastAPI resolves the\ndependency graph before calling the endpoint.\n\nFor testing, applications can replace dependencies through\n`app.dependency_overrides`.",
+        "score": 1.8207979586264893,
+        "rank": 3,
+        "retrieval_method": "sparse",
+        "raw_score": 1.8207979586264893,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Dependencies",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-3d8bec0149b12545",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "An application can raise `HTTPException` when it needs to return an HTTP error\nto the client. Exception handlers can customize the response format for\nspecific exception types.\n\nError responses should contain enough information for clients to understand\nwhether a request failed because of authentication, validation, authorization,\nor an internal server error.",
+        "score": 1.786574815651957,
+        "rank": 4,
+        "retrieval_method": "sparse",
+        "raw_score": 1.786574815651957,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Error Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-e493ece400da7f6e",
+        "document_id": "doc-370bd58704fc7d9e",
+        "text": "OpenTelemetry provides APIs and SDK components for collecting telemetry from\napplications. The main telemetry signals are traces, metrics, and logs.\n\nInstrumentation should make application behavior observable without changing\nthe business result of a request.",
+        "score": 1.6767065413293891,
+        "rank": 5,
+        "retrieval_method": "sparse",
+        "raw_score": 1.6767065413293891,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/opentelemetry/sample.md",
+        "section_heading": "OpenTelemetry Application Instrumentation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-1e1e6414d384b2d4",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Pydantic models describe structured data using Python type annotations. A model\nvalidates input data and exposes the validated result through model attributes.\n\nModels are useful for API request bodies, configuration objects, evaluation\nrecords, and serialized pipeline results.",
+        "score": 1.622272381069798,
+        "rank": 6,
+        "retrieval_method": "sparse",
+        "raw_score": 1.622272381069798,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Pydantic Models and Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-7423f12221625920",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Application settings should be separated from user-provided content. A settings\nmodel may load values from environment variables while still applying type\nvalidation and safe defaults.\n\nSensitive values such as `OPENAI_API_KEY` should not be included in logs,\nserialized reports, or error messages.",
+        "score": 1.5549633464345545,
+        "rank": 7,
+        "retrieval_method": "sparse",
+        "raw_score": 1.5549633464345545,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Configuration Models",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-d205e6d05a41f0b7",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "A model may contain a list of other models. For example, a generated answer\ncan contain a list of claim records, where each claim contains citation IDs.\n\nNested validation ensures that malformed citation records are rejected before\nthey reach the verification stage.",
+        "score": 1.5389998443989148,
+        "rank": 8,
+        "retrieval_method": "sparse",
+        "raw_score": 1.5389998443989148,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Nested Models",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-9e913413d9df654a",
+        "document_id": "doc-d7eacb2f1c434c99",
+        "text": "This directory contains a small, versioned snapshot of public technical\ndocumentation used for RAG experiments.\n\nThe snapshot is intentionally small and curated. It is not a mirror of\nthe upstream repositories.\n\nEach source must be recorded in `sources.yaml` with:\n\n- project name\n- repository URL\n- documentation URL\n- commit or version\n- license\n- retrieval date\n- local files included",
+        "score": 1.3701995906462918,
+        "rank": 9,
+        "retrieval_method": "sparse",
+        "raw_score": 1.3701995906462918,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/README.md",
+        "section_heading": "Curated Documentation Corpus",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      },
+      {
+        "chunk_id": "chunk-2d3e103dada1dde4",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "A production service should expose a lightweight health endpoint such as\n`GET /health`.\n\nThe health endpoint should avoid expensive database queries unless the purpose\nof the endpoint is to verify dependency health. A separate readiness endpoint\nmay be used when startup dependencies must be checked before receiving traffic.",
+        "score": 0.0,
+        "rank": 10,
+        "retrieval_method": "sparse",
+        "raw_score": 0.0,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Deployment and Health Checks",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware"
+        }
+      }
+    ],
+    "fused_results": [
+      {
+        "chunk_id": "chunk-53da6c37225bc887",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "FastAPI applications commonly define HTTP endpoints using Python functions\ndecorated with route methods such as `@app.get()` and `@app.post()`.\n\nThe framework uses Python type annotations to describe request parameters and\nresponse values. These annotations can be used for validation and OpenAPI\nschema generation.",
+        "score": 0.016393442622950817,
+        "rank": 1,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.36126166582107544,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "FastAPI Request Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.016393442622950817
+        }
+      },
+      {
+        "chunk_id": "chunk-b7090f36273959e8",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Dependencies allow shared logic to be declared separately from endpoint\nfunctions. Typical dependency use cases include authentication, database\nsessions, request-scoped configuration, and permission checks.\n\nA dependency may itself depend on another dependency. FastAPI resolves the\ndependency graph before calling the endpoint.\n\nFor testing, applications can replace dependencies through\n`app.dependency_overrides`.",
+        "score": 0.01605222734254992,
+        "rank": 2,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.5123615264892578,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Dependencies",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.01605222734254992
+        }
+      },
+      {
+        "chunk_id": "chunk-2065d98b75c96f46",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Request bodies can be represented using Pydantic models. When an incoming\npayload does not match the declared model, the request should be rejected with\na validation error response.\n\nQuery parameters and path parameters may be declared directly in the endpoint\nfunction signature.\n\nExample configuration keys commonly used by an application include:\n\n- `response_model`\n- `status_code`\n- `dependency_overrides`\n- `openapi_url`",
+        "score": 0.015949820788530467,
+        "rank": 3,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.573576807975769,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Request Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.015949820788530467
+        }
+      },
+      {
+        "chunk_id": "chunk-3d8bec0149b12545",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "An application can raise `HTTPException` when it needs to return an HTTP error\nto the client. Exception handlers can customize the response format for\nspecific exception types.\n\nError responses should contain enough information for clients to understand\nwhether a request failed because of authentication, validation, authorization,\nor an internal server error.",
+        "score": 0.015456730769230768,
+        "rank": 4,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.6233985424041748,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Error Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.015456730769230768
+        }
+      },
+      {
+        "chunk_id": "chunk-2d3e103dada1dde4",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "A production service should expose a lightweight health endpoint such as\n`GET /health`.\n\nThe health endpoint should avoid expensive database queries unless the purpose\nof the endpoint is to verify dependency health. A separate readiness endpoint\nmay be used when startup dependencies must be checked before receiving traffic.",
+        "score": 0.015223214285714284,
+        "rank": 5,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.617813229560852,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Deployment and Health Checks",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.015223214285714284
+        }
+      },
+      {
+        "chunk_id": "chunk-1e1e6414d384b2d4",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Pydantic models describe structured data using Python type annotations. A model\nvalidates input data and exposes the validated result through model attributes.\n\nModels are useful for API request bodies, configuration objects, evaluation\nrecords, and serialized pipeline results.",
+        "score": 0.01515151515151515,
+        "rank": 6,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.755302369594574,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Pydantic Models and Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.01515151515151515
+        }
+      },
+      {
+        "chunk_id": "chunk-7423f12221625920",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Application settings should be separated from user-provided content. A settings\nmodel may load values from environment variables while still applying type\nvalidation and safe defaults.\n\nSensitive values such as `OPENAI_API_KEY` should not be included in logs,\nserialized reports, or error messages.",
+        "score": 0.014477611940298507,
+        "rank": 7,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.7952700853347778,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Configuration Models",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.014477611940298507
+        }
+      },
+      {
+        "chunk_id": "chunk-f8e95b3416f345cd",
+        "document_id": "doc-370bd58704fc7d9e",
+        "text": "Useful pipeline metrics include:\n\n- retrieval latency;\n- generation latency;\n- number of retrieved chunks;\n- citation support rate;\n- abstention rate;\n- token usage;\n- estimated model cost.\n\nMetrics should use stable names and bounded label values. Raw user questions\nshould not be used as metric labels because they create high-cardinality data.",
+        "score": 0.01044776119402985,
+        "rank": 8,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.7675033807754517,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/opentelemetry/sample.md",
+        "section_heading": "Metrics",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.01044776119402985
+        }
+      },
+      {
+        "chunk_id": "chunk-07b6c73bfd042a4d",
+        "document_id": "doc-370bd58704fc7d9e",
+        "text": "When a request passes through multiple services, trace context allows spans\nfrom those services to be associated with the same trace.\n\nA service should propagate context through supported request headers when making\ndownstream calls.",
+        "score": 0.010294117647058823,
+        "rank": 9,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.7813431620597839,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/opentelemetry/sample.md",
+        "section_heading": "Context Propagation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.010294117647058823
+        }
+      },
+      {
+        "chunk_id": "chunk-ad1a3ab5e9f22df7",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "Pydantic models can be converted into dictionaries or JSON-compatible\nrepresentations. Serialization is useful when storing:\n\n- document metadata;\n- chunk records;\n- retrieval traces;\n- evaluation results;\n- API responses.\n\nA serialized object should preserve stable identifiers such as `document_id`,\n`chunk_id`, and `corpus_version`.",
+        "score": 0.010144927536231883,
+        "rank": 10,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.787369966506958,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Model Serialization",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.010144927536231883
+        }
+      },
+      {
+        "chunk_id": "chunk-e493ece400da7f6e",
+        "document_id": "doc-370bd58704fc7d9e",
+        "text": "OpenTelemetry provides APIs and SDK components for collecting telemetry from\napplications. The main telemetry signals are traces, metrics, and logs.\n\nInstrumentation should make application behavior observable without changing\nthe business result of a request.",
+        "score": 0.004615384615384615,
+        "rank": 11,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 1.6767065413293891,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/opentelemetry/sample.md",
+        "section_heading": "OpenTelemetry Application Instrumentation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.004615384615384615
+        }
+      },
+      {
+        "chunk_id": "chunk-d205e6d05a41f0b7",
+        "document_id": "doc-c366d9f41d0e34fc",
+        "text": "A model may contain a list of other models. For example, a generated answer\ncan contain a list of claim records, where each claim contains citation IDs.\n\nNested validation ensures that malformed citation records are rejected before\nthey reach the verification stage.",
+        "score": 0.004411764705882353,
+        "rank": 12,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 1.5389998443989148,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/pydantic/sample.md",
+        "section_heading": "Nested Models",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.004411764705882353
+        }
+      },
+      {
+        "chunk_id": "chunk-9e913413d9df654a",
+        "document_id": "doc-d7eacb2f1c434c99",
+        "text": "This directory contains a small, versioned snapshot of public technical\ndocumentation used for RAG experiments.\n\nThe snapshot is intentionally small and curated. It is not a mirror of\nthe upstream repositories.\n\nEach source must be recorded in `sources.yaml` with:\n\n- project name\n- repository URL\n- documentation URL\n- commit or version\n- license\n- retrieval date\n- local files included",
+        "score": 0.004347826086956522,
+        "rank": 13,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 1.3701995906462918,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/README.md",
+        "section_heading": "Curated Documentation Corpus",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.004347826086956522
+        }
+      }
+    ],
+    "final_results": [
+      {
+        "chunk_id": "chunk-53da6c37225bc887",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "FastAPI applications commonly define HTTP endpoints using Python functions\ndecorated with route methods such as `@app.get()` and `@app.post()`.\n\nThe framework uses Python type annotations to describe request parameters and\nresponse values. These annotations can be used for validation and OpenAPI\nschema generation.",
+        "score": 0.016393442622950817,
+        "rank": 1,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.36126166582107544,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "FastAPI Request Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.016393442622950817
+        }
+      },
+      {
+        "chunk_id": "chunk-b7090f36273959e8",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Dependencies allow shared logic to be declared separately from endpoint\nfunctions. Typical dependency use cases include authentication, database\nsessions, request-scoped configuration, and permission checks.\n\nA dependency may itself depend on another dependency. FastAPI resolves the\ndependency graph before calling the endpoint.\n\nFor testing, applications can replace dependencies through\n`app.dependency_overrides`.",
+        "score": 0.01605222734254992,
+        "rank": 2,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.5123615264892578,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Dependencies",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.01605222734254992
+        }
+      },
+      {
+        "chunk_id": "chunk-2065d98b75c96f46",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "Request bodies can be represented using Pydantic models. When an incoming\npayload does not match the declared model, the request should be rejected with\na validation error response.\n\nQuery parameters and path parameters may be declared directly in the endpoint\nfunction signature.\n\nExample configuration keys commonly used by an application include:\n\n- `response_model`\n- `status_code`\n- `dependency_overrides`\n- `openapi_url`",
+        "score": 0.015949820788530467,
+        "rank": 3,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.573576807975769,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Request Validation",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.015949820788530467
+        }
+      },
+      {
+        "chunk_id": "chunk-3d8bec0149b12545",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "An application can raise `HTTPException` when it needs to return an HTTP error\nto the client. Exception handlers can customize the response format for\nspecific exception types.\n\nError responses should contain enough information for clients to understand\nwhether a request failed because of authentication, validation, authorization,\nor an internal server error.",
+        "score": 0.015456730769230768,
+        "rank": 4,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.6233985424041748,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Error Handling",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.015456730769230768
+        }
+      },
+      {
+        "chunk_id": "chunk-2d3e103dada1dde4",
+        "document_id": "doc-305b572679e7f0d1",
+        "text": "A production service should expose a lightweight health endpoint such as\n`GET /health`.\n\nThe health endpoint should avoid expensive database queries unless the purpose\nof the endpoint is to verify dependency health. A separate readiness endpoint\nmay be used when startup dependencies must be checked before receiving traffic.",
+        "score": 0.015223214285714284,
+        "rank": 5,
+        "retrieval_method": "hybrid-rrf",
+        "raw_score": 0.617813229560852,
+        "source_path": "C:/Users/hp/OneDrive/Desktop/Projects/RAG - Project/data/corpus/fastapi/sample.md",
+        "section_heading": "Deployment and Health Checks",
+        "metadata": {
+          "index_version": "corpus-92b6dbbf925fedf5",
+          "strategy": "structure-aware",
+          "rrf_score": 0.015223214285714284
+        }
+      }
+    ],
+    "index_version": "corpus-92b6dbbf925fedf5",
+    "config": {
+      "dense_top_k": 10,
+      "sparse_top_k": 10,
+      "final_top_k": 5,
+      "rrf_k_constant": 60,
+      "dense_weight": 0.7,
+      "sparse_weight": 0.3
+    },
+    "metadata": {}
+  },
+  "grounded_answer": {
+    "answer": {
+      "answer": "HTTP endpoints in FastAPI are commonly defined using Python functions decorated with route methods like `@app.get()` and `@app.post()`. These functions can utilize Python type annotations for request parameters and response values, which assist in validation and OpenAPI schema generation.",
+      "claims": [
+        {
+          "text": "FastAPI applications commonly define HTTP endpoints using Python functions decorated with route methods such as `@app.get()` and `@app.post()`.",
+          "citations": [
+            "chunk-53da6c37225bc887"
+          ]
+        },
+        {
+          "text": "The framework uses Python type annotations to describe request parameters and response values. These annotations can be used for validation and OpenAPI schema generation.",
+          "citations": [
+            "chunk-53da6c37225bc887"
+          ]
+        }
+      ],
+      "abstained": false,
+      "abstention_reason": null,
+      "model_name": null
+    },
+    "citation_checks": [
+      {
+        "claim_text": "FastAPI applications commonly define HTTP endpoints using Python functions decorated with route methods such as `@app.get()` and `@app.post()`.",
+        "citation_id": "chunk-53da6c37225bc887",
+        "citation_exists": true,
+        "supported": true,
+        "entailment_score": 1.0,
+        "reason": "Citation exists; semantic judge was not used."
+      },
+      {
+        "claim_text": "The framework uses Python type annotations to describe request parameters and response values. These annotations can be used for validation and OpenAPI schema generation.",
+        "citation_id": "chunk-53da6c37225bc887",
+        "citation_exists": true,
+        "supported": true,
+        "entailment_score": 1.0,
+        "reason": "Citation exists; semantic judge was not used."
+      }
+    ],
+    "confidence": {
+      "retrieval_score": 0.983606557377049,
+      "citation_coverage": 1.0,
+      "answer_completeness": 1.0,
+      "composite_score": 0.9934426229508198,
+      "should_abstain": false,
+      "reasons": []
+    }
+  }
+}

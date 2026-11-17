@@ -21,7 +21,7 @@ from rag_pipeline.retrieval.engine import (
     RetrievalMode,
     RetrievalTrace,
 )
-
+from rag_pipeline.retrieval.rerank import Reranker
 
 def create_embedding_provider(
     settings: Settings,
@@ -176,6 +176,8 @@ def answer_retrieval_query(
     query: str,
     settings: Settings,
     provider: EmbeddingProvider | None = None,
+    mode: RetrievalMode = RetrievalMode.HYBRID,
+    reranker: Reranker | None = None,
 ) -> RetrievalTrace:
     """
     Load the latest indexes and return a hybrid retrieval trace.
@@ -201,6 +203,7 @@ def answer_retrieval_query(
         dense_index=dense_index,
         sparse_index=sparse_index,
         embedder=embedder,
+        reranker=reranker,
     )
 
     return engine.search(

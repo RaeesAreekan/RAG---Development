@@ -1,0 +1,2018 @@
+{
+  "dataset_path": "data\\evals\\golden.jsonl",
+  "evaluated_at": "2026-11-15T18:42:55.235375Z",
+  "case_count": 31,
+  "retrieval_metrics": {
+    "recall_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "precision_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "reciprocal_rank": 0.0,
+    "ndcg_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  "answer_metrics": {
+    "case_count": 31,
+    "abstention_accuracy": 0.9354838709677419,
+    "citation_support_rate": 0.9534883720930233,
+    "citation_coverage": 0.9523809523809523,
+    "lexical_answer_f1": 0.6707843721692396
+  },
+  "cases": [
+    {
+      "case_id": "fastapi-routing-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "HTTP endpoints in FastAPI are commonly defined using Python functions decorated with route methods like `@app.get()` and `@app.post()`. The framework also utilizes Python type annotations for request parameters and response values, facilitating validation and OpenAPI schema generation.",
+          "claims": [
+            {
+              "text": "FastAPI applications commonly define HTTP endpoints using Python functions decorated with route methods such as `@app.get()` and `@app.post()`.",
+              "citations": [
+                "chunk-53da6c37225bc887"
+              ]
+            },
+            {
+              "text": "The framework uses Python type annotations to describe request parameters and response values.",
+              "citations": [
+                "chunk-53da6c37225bc887"
+              ]
+            },
+            {
+              "text": "These annotations can be used for validation and OpenAPI schema generation.",
+              "citations": [
+                "chunk-53da6c37225bc887"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "FastAPI applications commonly define HTTP endpoints using Python functions decorated with route methods such as `@app.get()` and `@app.post()`.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "The framework uses Python type annotations to describe request parameters and response values.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "These annotations can be used for validation and OpenAPI schema generation.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-annotations-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Python type annotations in FastAPI are used to describe request parameters and response values, which facilitates validation and OpenAPI schema generation.",
+          "claims": [
+            {
+              "text": "FastAPI uses Python type annotations to describe request parameters and response values.",
+              "citations": [
+                "chunk-53da6c37225bc887"
+              ]
+            },
+            {
+              "text": "Type annotations can be used for validation and OpenAPI schema generation in FastAPI.",
+              "citations": [
+                "chunk-53da6c37225bc887"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "FastAPI uses Python type annotations to describe request parameters and response values.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Type annotations can be used for validation and OpenAPI schema generation in FastAPI.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-validation-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "When an incoming request body does not match its declared Pydantic model, the request should be rejected with a validation error response.",
+          "claims": [
+            {
+              "text": "When an incoming payload does not match the declared model, the request should be rejected with a validation error response.",
+              "citations": [
+                "chunk-2065d98b75c96f46"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "When an incoming payload does not match the declared model, the request should be rejected with a validation error response.",
+            "citation_id": "chunk-2065d98b75c96f46",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-parameters-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Query and path parameters in a FastAPI endpoint can be declared directly in the endpoint function signature.",
+          "claims": [
+            {
+              "text": "Query parameters and path parameters may be declared directly in the endpoint function signature.",
+              "citations": [
+                "chunk-2065d98b75c96f46"
+              ]
+            },
+            {
+              "text": "FastAPI applications commonly define HTTP endpoints using Python functions decorated with route methods such as `@app.get()` and `@app.post()`.",
+              "citations": [
+                "chunk-53da6c37225bc887"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Query parameters and path parameters may be declared directly in the endpoint function signature.",
+            "citation_id": "chunk-2065d98b75c96f46",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "FastAPI applications commonly define HTTP endpoints using Python functions decorated with route methods such as `@app.get()` and `@app.post()`.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-config-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The configuration key that controls the response schema for an endpoint is `response_model`.",
+          "claims": [
+            {
+              "text": "The `response_model` key is commonly used by an application to define the response schema for an endpoint.",
+              "citations": [
+                "chunk-2065d98b75c96f46"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "The `response_model` key is commonly used by an application to define the response schema for an endpoint.",
+            "citation_id": "chunk-2065d98b75c96f46",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-dependency-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Dependencies can be replaced during testing in FastAPI by using the `app.dependency_overrides` feature.",
+          "claims": [
+            {
+              "text": "Dependencies can be replaced during testing in FastAPI using `app.dependency_overrides`.",
+              "citations": [
+                "chunk-b7090f36273959e8"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Dependencies can be replaced during testing in FastAPI using `app.dependency_overrides`.",
+            "citation_id": "chunk-b7090f36273959e8",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-dependency-use-cases-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Typical use cases for FastAPI dependencies include authentication, database sessions, request-scoped configuration, and permission checks.",
+          "claims": [
+            {
+              "text": "Typical dependency use cases include authentication, database sessions, request-scoped configuration, and permission checks.",
+              "citations": [
+                "chunk-b7090f36273959e8"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Typical dependency use cases include authentication, database sessions, request-scoped configuration, and permission checks.",
+            "citation_id": "chunk-b7090f36273959e8",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-dependency-graph-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "FastAPI handles dependencies by allowing a dependency to depend on another dependency. It resolves the entire dependency graph before calling the endpoint.",
+          "claims": [
+            {
+              "text": "FastAPI resolves the dependency graph before calling the endpoint.",
+              "citations": [
+                "chunk-b7090f36273959e8"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "FastAPI resolves the dependency graph before calling the endpoint.",
+            "citation_id": "chunk-b7090f36273959e8",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-errors-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "An application can raise `HTTPException` to return an HTTP error to the client.",
+          "claims": [
+            {
+              "text": "An application can raise `HTTPException` when it needs to return an HTTP error to the client.",
+              "citations": [
+                "chunk-3d8bec0149b12545"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "An application can raise `HTTPException` when it needs to return an HTTP error to the client.",
+            "citation_id": "chunk-3d8bec0149b12545",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-health-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "A production service should expose a lightweight health endpoint such as `GET /health`.",
+          "claims": [
+            {
+              "text": "A production service should expose a lightweight health endpoint such as `GET /health`.",
+              "citations": [
+                "chunk-2d3e103dada1dde4"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A production service should expose a lightweight health endpoint such as `GET /health`.",
+            "citation_id": "chunk-2d3e103dada1dde4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-readiness-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "A service might use a separate readiness endpoint instead of only a health endpoint when it is necessary to check startup dependencies before the service begins receiving traffic. This helps ensure the service is fully ready and its dependencies are operational before handling requests.",
+          "claims": [
+            {
+              "text": "A separate readiness endpoint may be used when startup dependencies must be checked before receiving traffic.",
+              "citations": [
+                "chunk-2d3e103dada1dde4"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A separate readiness endpoint may be used when startup dependencies must be checked before receiving traffic.",
+            "citation_id": "chunk-2d3e103dada1dde4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "fastapi-health-ambiguous-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "No, a health endpoint should not always run an expensive database query. It should avoid such queries unless the purpose is to verify dependency health.",
+          "claims": [
+            {
+              "text": "A production service should expose a lightweight health endpoint such as `GET /health`. The health endpoint should avoid expensive database queries unless the purpose of the endpoint is to verify dependency health.",
+              "citations": [
+                "chunk-2d3e103dada1dde4"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A production service should expose a lightweight health endpoint such as `GET /health`. The health endpoint should avoid expensive database queries unless the purpose of the endpoint is to verify dependency health.",
+            "citation_id": "chunk-2d3e103dada1dde4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "otel-signals-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The main telemetry signals provided by OpenTelemetry are traces, metrics, and logs.",
+          "claims": [
+            {
+              "text": "The main telemetry signals are traces, metrics, and logs.",
+              "citations": [
+                "chunk-e493ece400da7f6"
+              ]
+            }
+          ],
+          "abstained": true,
+          "abstention_reason": "Citation coverage is below the configured threshold.",
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "The main telemetry signals are traces, metrics, and logs.",
+            "citation_id": "chunk-e493ece400da7f6",
+            "citation_exists": false,
+            "supported": false,
+            "entailment_score": 0.0,
+            "reason": "Citation ID was not found in retrieved evidence."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 0.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.5934426229508196,
+          "should_abstain": true,
+          "reasons": [
+            "Citation coverage is below the configured threshold."
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "otel-rag-spans-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Stages of a RAG query that may be represented as OpenTelemetry spans include: 1. request parsing; 2. query embedding; 3. dense retrieval; 4. sparse retrieval; 5. result fusion; 6. generation; 7. citation verification.",
+          "claims": [
+            {
+              "text": "A RAG query may create spans for request parsing, query embedding, dense retrieval, sparse retrieval, result fusion, generation, and citation verification.",
+              "citations": [
+                "chunk-99239b794bdfed60"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A RAG query may create spans for request parsing, query embedding, dense retrieval, sparse retrieval, result fusion, generation, and citation verification.",
+            "citation_id": "chunk-99239b794bdfed60",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "otel-metrics-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Useful metrics for monitoring a RAG pipeline include retrieval latency, generation latency, number of retrieved chunks, citation support rate, abstention rate, token usage, and estimated model cost.",
+          "claims": [
+            {
+              "text": "Useful pipeline metrics include retrieval latency, generation latency, number of retrieved chunks, citation support rate, abstention rate, token usage, and estimated model cost.",
+              "citations": [
+                "chunk-f8e95b3416f345cd"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Useful pipeline metrics include retrieval latency, generation latency, number of retrieved chunks, citation support rate, abstention rate, token usage, and estimated model cost.",
+            "citation_id": "chunk-f8e95b3416f345cd",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "otel-metrics-privacy-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Raw user questions should not be used as metric labels because they create high-cardinality data.",
+          "claims": [
+            {
+              "text": "Raw user questions should not be used as metric labels because they create high-cardinality data.",
+              "citations": [
+                "f8e95b3416f345cd"
+              ]
+            }
+          ],
+          "abstained": true,
+          "abstention_reason": "Citation coverage is below the configured threshold.",
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Raw user questions should not be used as metric labels because they create high-cardinality data.",
+            "citation_id": "f8e95b3416f345cd",
+            "citation_exists": false,
+            "supported": false,
+            "entailment_score": 0.0,
+            "reason": "Citation ID was not found in retrieved evidence."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 0.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.5934426229508196,
+          "should_abstain": true,
+          "reasons": [
+            "Citation coverage is below the configured threshold."
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "otel-exporter-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "For local development, a console exporter is commonly used, while an OTLP exporter may be used in production.",
+          "claims": [
+            {
+              "text": "Local development may use a console exporter, while production deployments may use an OTLP exporter.",
+              "citations": [
+                "chunk-358648f4890fb965"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Local development may use a console exporter, while production deployments may use an OTLP exporter.",
+            "citation_id": "chunk-358648f4890fb965",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "otel-privacy-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Telemetry must avoid recording sensitive data such as API keys, authorization headers, full document contents, and sensitive user questions.",
+          "claims": [
+            {
+              "text": "Telemetry must avoid recording API keys, authorization headers, full document contents, or sensitive user questions.",
+              "citations": [
+                "chunk-a319417bb423896e"
+              ]
+            },
+            {
+              "text": "Sensitive values such as `OPENAI_API_KEY` should not be included in logs, serialized reports, or error messages.",
+              "citations": [
+                "chunk-7423f12221625920"
+              ]
+            },
+            {
+              "text": "Raw user questions should not be used as metric labels because they create high-cardinality data.",
+              "citations": [
+                "chunk-f8e95b3416f345cd"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Telemetry must avoid recording API keys, authorization headers, full document contents, or sensitive user questions.",
+            "citation_id": "chunk-a319417bb423896e",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Sensitive values such as `OPENAI_API_KEY` should not be included in logs, serialized reports, or error messages.",
+            "citation_id": "chunk-7423f12221625920",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Raw user questions should not be used as metric labels because they create high-cardinality data.",
+            "citation_id": "chunk-f8e95b3416f345cd",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-models-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Pydantic models use Python type annotations to describe structured data for input validation and to expose validated results through model attributes.",
+          "claims": [
+            {
+              "text": "Pydantic models describe structured data using Python type annotations.",
+              "citations": [
+                "chunk-1e1e6414d384b2d4"
+              ]
+            },
+            {
+              "text": "A model validates input data and exposes the validated result through model attributes.",
+              "citations": [
+                "chunk-1e1e6414d384b2d4"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": "GeneratedAnswer"
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Pydantic models describe structured data using Python type annotations.",
+            "citation_id": "chunk-1e1e6414d384b2d4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "A model validates input data and exposes the validated result through model attributes.",
+            "citation_id": "chunk-1e1e6414d384b2d4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-constraints-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Pydantic fields can specify several types of constraints including minimum and maximum numeric values, minimum string lengths, regular expression patterns, default values, and requirements for a field to be non-empty or required.",
+          "claims": [
+            {
+              "text": "Pydantic fields can specify constraints such as minimum and maximum numeric values, minimum string length, regular expression patterns, default values, and whether a field is required.",
+              "citations": [
+                "chunk-1bc9db548a63da58"
+              ]
+            },
+            {
+              "text": "A field named `embedding_model` may be constrained to a non-empty string.",
+              "citations": [
+                "chunk-1bc9db548a63da58"
+              ]
+            },
+            {
+              "text": "A field named `top_k` may require a value greater than or equal to one.",
+              "citations": [
+                "chunk-1bc9db548a63da58"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Pydantic fields can specify constraints such as minimum and maximum numeric values, minimum string length, regular expression patterns, default values, and whether a field is required.",
+            "citation_id": "chunk-1bc9db548a63da58",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "A field named `embedding_model` may be constrained to a non-empty string.",
+            "citation_id": "chunk-1bc9db548a63da58",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "A field named `top_k` may require a value greater than or equal to one.",
+            "citation_id": "chunk-1bc9db548a63da58",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-config-identifier-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The minimum value required for the `top_k` field is greater than or equal to one.",
+          "claims": [
+            {
+              "text": "A field named `top_k` may require a value greater than or equal to one.",
+              "citations": [
+                "chunk-1bc9db548a63da58"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A field named `top_k` may require a value greater than or equal to one.",
+            "citation_id": "chunk-1bc9db548a63da58",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-serialization-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Serialized Pydantic objects should preserve stable identifiers such as `document_id`, `chunk_id`, and `corpus_version`. Additionally, they can represent metadata, including document metadata, chunk records, retrieval traces, evaluation results, and API responses.",
+          "claims": [
+            {
+              "text": "A serialized object should preserve stable identifiers such as `document_id`, `chunk_id`, and `corpus_version`.",
+              "citations": [
+                "chunk-ad1a3ab5e9f22df7"
+              ]
+            },
+            {
+              "text": "Pydantic models can be converted into dictionaries or JSON-compatible representations, useful for storing various types of data.",
+              "citations": [
+                "chunk-ad1a3ab5e9f22df7"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A serialized object should preserve stable identifiers such as `document_id`, `chunk_id`, and `corpus_version`.",
+            "citation_id": "chunk-ad1a3ab5e9f22df7",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Pydantic models can be converted into dictionaries or JSON-compatible representations, useful for storing various types of data.",
+            "citation_id": "chunk-ad1a3ab5e9f22df7",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-nested-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Nested validation is useful for generated citation records because it ensures that malformed citation records are rejected before they reach the verification stage. This helps maintain data integrity by filtering out invalid inputs early in the validation process.",
+          "claims": [
+            {
+              "text": "Nested validation ensures that malformed citation records are rejected before they reach the verification stage.",
+              "citations": [
+                "chunk-d205e6d05a41f0b7"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Nested validation ensures that malformed citation records are rejected before they reach the verification stage.",
+            "citation_id": "chunk-d205e6d05a41f0b7",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-secrets-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "Sensitive values such as `OPENAI_API_KEY` should be excluded from logs, serialized reports, and error messages.",
+          "claims": [
+            {
+              "text": "Sensitive values such as `OPENAI_API_KEY` should not be included in logs, serialized reports, or error messages.",
+              "citations": [
+                "chunk-7423f12221625920"
+              ]
+            },
+            {
+              "text": "Telemetry must avoid recording API keys, authorization headers, full document contents, or sensitive user questions.",
+              "citations": [
+                "chunk-a319417bb423896e"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "Sensitive values such as `OPENAI_API_KEY` should not be included in logs, serialized reports, or error messages.",
+            "citation_id": "chunk-7423f12221625920",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Telemetry must avoid recording API keys, authorization headers, full document contents, or sensitive user questions.",
+            "citation_id": "chunk-a319417bb423896e",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "pydantic-abstention-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "An unanswerable question should be represented by the application with `abstained: true`, along with a human-readable abstention reason, retrieved evidence if available, and confidence diagnostics.",
+          "claims": [
+            {
+              "text": "An unanswerable question should not be represented as a successful answer with fabricated content. The application response can instead include: `abstained: true`; a human-readable abstention reason; retrieved evidence, if any; confidence diagnostics.",
+              "citations": [
+                "chunk-f66b7cb03013a785"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "An unanswerable question should not be represented as a successful answer with fabricated content. The application response can instead include: `abstained: true`; a human-readable abstention reason; retrieved evidence, if any; confidence diagnostics.",
+            "citation_id": "chunk-f66b7cb03013a785",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.983606557377049,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9934426229508198,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "cross-source-observability-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "For a RAG system to have visibility into retrieval and generation, it should create spans for request parsing, query embedding, dense retrieval, sparse retrieval, result fusion, generation, and citation verification. Additionally, it should monitor metrics, including retrieval latency, generation latency, number of retrieved chunks, citation support rate, abstention rate, token usage, and estimated model cost.",
+          "claims": [
+            {
+              "text": "A RAG query may create spans for request parsing, query embedding, dense retrieval, sparse retrieval, result fusion, generation, and citation verification.",
+              "citations": [
+                "chunk-99239b794bdfed60"
+              ]
+            },
+            {
+              "text": "Useful pipeline metrics include retrieval latency, generation latency, number of retrieved chunks, citation support rate, abstention rate, token usage, and estimated model cost.",
+              "citations": [
+                "chunk-f8e95b3416f345cd"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "A RAG query may create spans for request parsing, query embedding, dense retrieval, sparse retrieval, result fusion, generation, and citation verification.",
+            "citation_id": "chunk-99239b794bdfed60",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Useful pipeline metrics include retrieval latency, generation latency, number of retrieved chunks, citation support rate, abstention rate, token usage, and estimated model cost.",
+            "citation_id": "chunk-f8e95b3416f345cd",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.967741935483871,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9870967741935484,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "cross-source-validation-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "FastAPI request validation and Pydantic validation are closely related. FastAPI uses Pydantic models to validate incoming request bodies. When an incoming payload does not match the defined Pydantic model, FastAPI rejects the request and returns a validation error. This process ensures structured data input through the use of Python type annotations, which are utilized in both FastAPI for defining request parameters and in Pydantic for validating data.",
+          "claims": [
+            {
+              "text": "FastAPI uses Pydantic models for request body validation.",
+              "citations": [
+                "chunk-2065d98b75c96f46"
+              ]
+            },
+            {
+              "text": "Pydantic models validate input data and are useful for structured data.",
+              "citations": [
+                "chunk-1e1e6414d384b2d4"
+              ]
+            },
+            {
+              "text": "If an incoming payload does not match the Pydantic model, the request is rejected with a validation error in FastAPI.",
+              "citations": [
+                "chunk-2065d98b75c96f46"
+              ]
+            },
+            {
+              "text": "FastAPI and Pydantic both use Python type annotations for defining parameters and validation.",
+              "citations": [
+                "chunk-53da6c37225bc887",
+                "chunk-1e1e6414d384b2d4"
+              ]
+            }
+          ],
+          "abstained": false,
+          "abstention_reason": null,
+          "model_name": null
+        },
+        "citation_checks": [
+          {
+            "claim_text": "FastAPI uses Pydantic models for request body validation.",
+            "citation_id": "chunk-2065d98b75c96f46",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "Pydantic models validate input data and are useful for structured data.",
+            "citation_id": "chunk-1e1e6414d384b2d4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "If an incoming payload does not match the Pydantic model, the request is rejected with a validation error in FastAPI.",
+            "citation_id": "chunk-2065d98b75c96f46",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "FastAPI and Pydantic both use Python type annotations for defining parameters and validation.",
+            "citation_id": "chunk-53da6c37225bc887",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          },
+          {
+            "claim_text": "FastAPI and Pydantic both use Python type annotations for defining parameters and validation.",
+            "citation_id": "chunk-1e1e6414d384b2d4",
+            "citation_exists": true,
+            "supported": true,
+            "entailment_score": 1.0,
+            "reason": "Citation exists; semantic judge was not used."
+          }
+        ],
+        "confidence": {
+          "retrieval_score": 0.9742388758782201,
+          "citation_coverage": 1.0,
+          "answer_completeness": 1.0,
+          "composite_score": 0.9896955503512881,
+          "should_abstain": false,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "case_id": "unknown-database-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The evidence provided does not specify which database engine the system uses.",
+          "claims": [],
+          "abstained": true,
+          "abstention_reason": "Citation coverage is below the configured threshold.",
+          "model_name": null
+        },
+        "citation_checks": [],
+        "confidence": {
+          "retrieval_score": 0.961251862891207,
+          "citation_coverage": 0.0,
+          "answer_completeness": 0.0,
+          "composite_score": 0.3845007451564828,
+          "should_abstain": true,
+          "reasons": [
+            "Citation coverage is below the configured threshold."
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "unknown-model-version-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The exact OpenTelemetry package version installed in production is not specified in the provided evidence.",
+          "claims": [],
+          "abstained": true,
+          "abstention_reason": "Citation coverage is below the configured threshold.",
+          "model_name": null
+        },
+        "citation_checks": [],
+        "confidence": {
+          "retrieval_score": 0.9788471708090958,
+          "citation_coverage": 0.0,
+          "answer_completeness": 0.0,
+          "composite_score": 0.3915388683236383,
+          "should_abstain": true,
+          "reasons": [
+            "Citation coverage is below the configured threshold."
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "unknown-latency-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The evidence does not specify the measured retrieval latency in milliseconds for the RAG system.",
+          "claims": [],
+          "abstained": true,
+          "abstention_reason": "Citation coverage is below the configured threshold.",
+          "model_name": null
+        },
+        "citation_checks": [],
+        "confidence": {
+          "retrieval_score": 0.9788471708090958,
+          "citation_coverage": 0.0,
+          "answer_completeness": 0.0,
+          "composite_score": 0.3915388683236383,
+          "should_abstain": true,
+          "reasons": [
+            "Citation coverage is below the configured threshold."
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "unknown-license-001",
+      "retrieval_metrics": {
+        "recall_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "ndcg_at_k": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "10": 0.0
+        }
+      },
+      "grounded_answer": {
+        "answer": {
+          "answer": "The evidence provided does not specify any license governing the deployed application code.",
+          "claims": [],
+          "abstained": true,
+          "abstention_reason": "Citation coverage is below the configured threshold.",
+          "model_name": null
+        },
+        "citation_checks": [],
+        "confidence": {
+          "retrieval_score": 0.956989247311828,
+          "citation_coverage": 0.0,
+          "answer_completeness": 0.0,
+          "composite_score": 0.3827956989247312,
+          "should_abstain": true,
+          "reasons": [
+            "Citation coverage is below the configured threshold."
+          ]
+        }
+      }
+    }
+  ],
+  "run_metadata": {
+    "corpus_version": "corpus-92b6dbbf925fedf5",
+    "retrieval_mode": "hybrid",
+    "embedding_model": "text-embedding-3-small",
+    "generation_model": "gpt-4o",
+    "evaluation_model": "gpt-4o-mini",
+    "dense_top_k": 10,
+    "sparse_top_k": 10,
+    "final_top_k": 5,
+    "dense_weight": 0.7,
+    "sparse_weight": 0.3,
+    "dataset": "data\\evals\\golden.jsonl",
+    "case_count": 31,
+    "cache_enabled": true,
+    "cache_hits": 31,
+    "cache_misses": 0,
+    "duration_seconds": 0.024
+  }
+}
